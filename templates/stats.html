@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Tracks and Artists</title>
+</head>
+<body>
+
+    <h1>Here is your spotify stats!</h1>
+
+    <h1>Top Tracks (Last 4 Weeks)</h1>
+    <ul>
+        {% for track in tracks4weeks %}
+        <li>
+            {{ track.index }}. {{ track.track_name }}, by {{ track.artists }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Top Tracks (Last 6 Months)</h1>
+    <ul>
+        {% for track in tracks6months %}
+        <li>
+            {{ track.index }}. {{ track.track_name }}, by {{ track.artists }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Top Tracks (All time)</h1>
+    <ul>
+        {% for track in tracksalltime %}
+        <li>
+            {{ track.index }}. {{ track.track_name }}, by {{ track.artists }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Top Artists (Last 4 Weeks)</h1>
+    <ul>
+        {% for artist in artists4weeks %}
+        <li>
+            {{ artist.index }}. {{ artist.artist_name }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Top Artists (Last 6 Months)</h1>
+    <ul>
+        {% for artist in artists6months %}
+        <li>
+            {{ artist.index }}. {{ artist.artist_name }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Top Artists (All time)</h1>
+    <ul>
+        {% for artist in artistsalltime %}
+        <li>
+            {{ artist.index }}. {{ artist.artist_name }}
+        </li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>
