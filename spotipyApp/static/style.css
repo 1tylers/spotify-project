@@ -1,0 +1,10 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: linear-gradient(245.59deg, #4aaa5a 0%, #27612c 28.53%, #0f4414 75.52%);
+}
+
+h1 {
+    color: rgb(235, 239, 234);
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
+}

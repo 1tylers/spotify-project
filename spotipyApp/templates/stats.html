@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Tracks and Artists</title>
+    
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Condensed:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Here is your spotify stats!</h1>
+
+    <h1>Top Tracks (Last 4 Weeks)</h1>
+    <ul>
+        {% for track in tracks4weeks %}
+        <li>
+            {{ track.index }}. {{ track.track_name }}, by {{ track.artists }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Top Tracks (Last 6 Months)</h1>
+    <ul>
+        {% for track in tracks6months %}
+        <li>
+            {{ track.index }}. {{ track.track_name }}, by {{ track.artists }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Top Tracks (All time)</h1>
+    <ul>
+        {% for track in tracksalltime %}
+        <li>
+            {{ track.index }}. {{ track.track_name }}, by {{ track.artists }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Top Artists (Last 4 Weeks)</h1>
+    <ul>
+        {% for artist in artists4weeks %}
+        <li>
+            {{ artist.index }}. {{ artist.artist_name }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Top Artists (Last 6 Months)</h1>
+    <ul>
+        {% for artist in artists6months %}
+        <li>
+            {{ artist.index }}. {{ artist.artist_name }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Top Artists (All time)</h1>
+    <ul>
+        {% for artist in artistsalltime %}
+        <li>
+            {{ artist.index }}. {{ artist.artist_name }}
+        </li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>
